@@ -7,7 +7,7 @@ const fetchBreedDescription = function(breedName, callback) {
     if (error) {
       err = error;
     } else {
-      if (response.statusCode >= 200 && response.statusCode <= 299) {
+      if (response.statusCode === 200) {
         // convert body from string to object
         const data = JSON.parse(body);
         if (data.length === 0) {
